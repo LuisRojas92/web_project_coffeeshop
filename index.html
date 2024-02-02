@@ -16,7 +16,6 @@
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="page">
       <header class="header">
@@ -72,8 +71,8 @@
             Echa un vistazo a algunas de nuestras recetas <br />
             que elabores tu propio café.
           </p>
-          <div class="recipes__videos">
-            <div class="recipes__video-item">
+          <ul class="recipes__videos">
+            <li class="recipes__video-item">
               <iframe
                 class="recipes__iframe"
                 width="480"
@@ -83,12 +82,12 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
-              <div class="recipes__video-caption">
-                <p>Receta en Aeropress</p>
-                <p>~5 min</p>
-              </div>
-            </div>
-            <div class="recipes__video-item">
+              <ul class="recipes__video-caption">
+                <li>Receta en Aeropress</li>
+                <li>~5 min</li>
+              </ul>
+            </li>
+            <li class="recipes__video-item">
               <iframe
                 class="recipes__iframe"
                 width="480"
@@ -98,18 +97,209 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
-              <div class="recipes__video-caption">
-                <p>Receta en cafetera francesa</p>
-                <p>~15 min</p>
-              </div>
-            </div>
+              <ul class="recipes__video-caption">
+                <li>Receta en cafetera francesa</li>
+                <li>~15 min</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="reservation" id="reservar">
+          <h2 class="reservation__title">Reservar una mesa</h2>
+
+          <form class="form reservation__form">
+            <fieldset class="form__fieldset">
+              <label class="form__label" for="nombre">Nombre *</label>
+              <input
+                class="form__input"
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Nombre Apellido"
+                required
+              />
+              <label class="form__label" for="numero-comensales"
+                >Número de comensales *</label
+              >
+              <input
+                class="form__input"
+                type="number"
+                name="numero-comensales"
+                id="numero-comensales"
+                placeholder="1-8"
+                required
+              />
+              <label class="form__label" for="date-time">Fecha y hora *</label>
+              <input
+                class="form__input"
+                type="datetime-local"
+                name="date-time"
+                id="date-time"
+                required
+              />
+              <label class="form__label" for="email"
+                >Tu correo electrónico *</label
+              >
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@email.com"
+                required
+              />
+              <button type="submit" class="form__button">
+                Reservar una mesa
+              </button>
+              <label
+                class="form__label form__label_text_terminos"
+                for="terminos"
+              >
+                <input
+                  class="form__checkbox"
+                  type="checkbox"
+                  name="terminos"
+                  id="terminos"
+                  required
+                />Acepto los términos de uso
+              </label>
+            </fieldset>
+          </form>
+        </section>
+        <!-- <section class="menu" id="menu">
+          <h2 class="menu__title">Menú</h2>
+          <p class="menu__subtitle">
+            Elaboramos nuestro café con granos certificados de comercio justo,
+            tostados localmente, y usamos tazas biodegradables. Todos los tés de
+            nuestra colección a $2/taza.
+          </p>
+          <div class="menu__cards">
+            <ul class="card">
+              <li class="card__title">De filtro</li>
+              <li class="card__title-list">
+                <ul class="card__content">
+                  <li class="card__list-item">
+                    Regular (350 ml)
+                    <span class="card__list-divider"></span>
+                    $1
+                  </li>
+                  <li class="card__list-item">
+                    Grande (470 ml)
+                    <span class="card__list-divider"></span>
+                    $1.25
+                  </li>
+                  <li class="card__list-item">
+                    XL (590 ml)
+                    <span class="card__list-divider"></span>
+                    $1.5
+                  </li>
+                  <li class="card__list-item">
+                    Tamaño familiar (700 ml, descafeinado)
+                    <span class="card__list-divider"></span>
+                    $1.75
+                  </li>
+                  <li class="card__list-item">
+                    Café helado (470 ml)
+                    <span class="card__list-divider"></span>
+                    $1.25
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="card">
+              <li class="card__title">Espresso</li>
+              <li class="card__title-list">
+                <ul class="card__content">
+                  <li class="card__list-item">
+                    Macchiato
+                    <span class="card__list-divider"></span>
+                    $2.25
+                  </li>
+                  <li class="card__list-item">
+                    Cortado
+                    <span class="card__list-divider"></span>
+                    $2.5
+                  </li>
+                  <li class="card__list-item">
+                    Mocha
+                    <span class="card__list-divider"></span>
+                    $3
+                  </li>
+                  <li class="card__list-item">
+                    Amanecer en Bay Area (descafeinado)
+                    <span class="card__list-divider"></span>
+                    $10
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="card">
+              <li class="card__title">Repostería</li>
+              <li class="card__title-list">
+                <ul class="card__content">
+                  <li class="card__list-item">
+                    Croissant de almendra
+                    <span class="card__list-divider"></span>
+                    $2
+                  </li>
+                  <li class="card__list-item">
+                    Pan de banana
+                    <span class="card__list-divider"></span>
+                    $1.75
+                  </li>
+                  <li class="card__list-item">
+                    Tarta de limón
+                    <span class="card__list-divider"></span>
+                    $3
+                  </li>
+                  <li class="card__list-item">
+                    Pastel Blue velvet
+                    <span class="card__list-divider"></span>
+                    $3.75
+                  </li>
+                  <li class="card__list-item">
+                    Cookie web
+                    <span class="card__list-divider"></span>
+                    $2
+                  </li>
+                  <li class="card__list-item">
+                    Baguette fresco
+                    <span class="card__list-divider"></span>
+                    $0.25
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </section>
-        <section class="reservation" id="reservar"></section>
-        <section class="menu" id="menu"></section>
-        <section class="about"></section>
+        <section class="about">
+          <h2 class="about__title">Sobre la<br />cafetería</h2>
+          <div class="about__content">
+            <p class="about__paragraph">
+              Nuestra cafetería se ubica en la Biblioteca Triple Peaks. Cuenta
+              con 6 mesas y WiFi gratuito.
+            </p>
+            <p class="about__paragraph">
+              Nuestra principal misión es mantener a nuestros comensales cómodos
+              y con energía.
+            </p>
+            <p class="about__paragraph">
+              Además, buscamos reducir nuestro impacto ambiental, así que no
+              vendemos tazas de un solo uso. ¡Pero puedes comprar una de
+              nuestras tazas reutilizables!
+            </p>
+          </div>
+          <div class="about__circle"></div>
+        </section> -->
       </main>
-      <footer class="footer" id="contactos"></footer>
+      <footer class="footer" id="contactos">
+        <p>© 2023 Luis Rojas</p>
+        <!-- <p class="footer__copyright">© 2023 Luis Rojas</p> -->
+        <!-- <p> Redes sociales
+          Facebook
+          Instagram</p> -->
+      </footer>
     </div>
   </body>
 </html>
