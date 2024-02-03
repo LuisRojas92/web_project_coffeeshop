@@ -9,6 +9,7 @@
   max-height: 800px;
   position: relative;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .header__title {
@@ -36,11 +37,12 @@
   line-height: 30px;
 }
 .header__image {
+  position: absolute;
   width: 646px;
   height: 568px;
-  position: absolute;
-  right: 5px;
   top: 124px;
+  right: 5px;
+  z-index: 0;
 }
 .header__footer {
   margin-top: auto;
